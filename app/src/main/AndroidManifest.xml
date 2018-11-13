@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".A2_Login"></activity>
         <activity android:name=".A3_Register"></activity>
-
+        <activity android:name=".B1_PersonalInfo"></activity>
     </application>
 
 </manifest>

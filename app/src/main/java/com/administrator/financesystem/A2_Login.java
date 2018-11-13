@@ -38,15 +38,16 @@ public class A2_Login extends AppCompatActivity {
                 String userID = userid.getText().toString();
                 String passWord = userpassword.getText().toString();
                 if (login(userID, passWord)) {
-                    Toast.makeText(A2_Login.this, "登陆成功", Toast.LENGTH_SHORT).show();
+
                     loginflag = 1;
                     Log.v("test", "loginclicked success");
                     Bundle bundle = new Bundle();
                     bundle.putString("LoginuserID", userID);
-//                    Intent intent = new Intent(A2_Login.this, AdminDrawer.class);
-//                    intent.putExtras(bundle);
-//                    startActivity(intent);
-                    Log.v("test", userID);
+                    Intent intent = new Intent(A2_Login.this, B1_PersonalInfo.class);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                    Log.v("test", "传输成功的userID是："+userID);
+                    Toast.makeText(A2_Login.this, "登陆成功", Toast.LENGTH_SHORT).show();
                 } else if ((userid.getText().toString().isEmpty()) || (userpassword.getText().toString().isEmpty())) {
                     Toast.makeText(A2_Login.this, "账户和密码不能为空，请重新输入", Toast.LENGTH_SHORT).show();
                 } else if (loginflag != 1) {
