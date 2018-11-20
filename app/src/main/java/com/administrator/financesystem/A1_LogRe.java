@@ -28,3 +28,4 @@ public class A1_LogRe extends AppCompatActivity {
     }
 }
 //格式化代码 ctrl+alt+L  替换ctrl+R 查找 ctrl+F  定位到资源ctrl+B 代码块生成ctrl+J
+//    cd D:\7370\FinanceSystem\others

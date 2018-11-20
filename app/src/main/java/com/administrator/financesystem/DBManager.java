@@ -59,4 +59,6 @@ public class DBManager {
     public void closeDatabase() {
         this.database.close();
     }
+
+
 }

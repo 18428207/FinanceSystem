@@ -15,7 +15,7 @@ public class MySqliteHelper extends SQLiteOpenHelper {
             + Environment.getDataDirectory().getAbsolutePath() + "/"
             + PACKAGE_NAME;  //在手机里存放数据库的位置
     private static Integer Version = 1;
-
+    private static  MySqliteHelper dbHelper;
 
     private static final int DATABASE_VERSION = 1;
     // Database name
@@ -71,4 +71,14 @@ public class MySqliteHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         System.out.println("更新数据库版本为:" + newVersion);
     }
+
+
+    public static MySqliteHelper getInstance(Context context) {
+
+        if (dbHelper == null) { //单例模式
+            dbHelper = new MySqliteHelper(context);
+        }
+        return dbHelper;
+    }
+
 }

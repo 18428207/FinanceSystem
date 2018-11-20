@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.administrator.financesystem">
 
-    <application
+   <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,7 +19,9 @@
         </activity>
         <activity android:name=".A2_Login"></activity>
         <activity android:name=".A3_Register"></activity>
-        <activity android:name=".B1_PersonalInfo"></activity>
+        <activity android:name=".E1_WealthIndex"></activity>
+       <activity android:name=".C1_FriendsIndex"></activity>
+       <activity android:name=".C2_SearchFriend"></activity>
     </application>
 
 </manifest>

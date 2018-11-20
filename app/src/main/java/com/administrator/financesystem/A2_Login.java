@@ -43,9 +43,10 @@ public class A2_Login extends AppCompatActivity {
                     Log.v("test", "loginclicked success");
                     Bundle bundle = new Bundle();
                     bundle.putString("LoginuserID", userID);
-                    Intent intent = new Intent(A2_Login.this, B1_PersonalInfo.class);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
+                    Intent intent1 = new Intent(A2_Login.this, E1_WealthIndex.class);
+                    intent1.putExtras(bundle);
+
+                    startActivity(intent1);
                     Log.v("test", "传输成功的userID是："+userID);
                     Toast.makeText(A2_Login.this, "登陆成功", Toast.LENGTH_SHORT).show();
                 } else if ((userid.getText().toString().isEmpty()) || (userpassword.getText().toString().isEmpty())) {
