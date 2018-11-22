@@ -79,7 +79,8 @@ public class A3_Register extends AppCompatActivity {
                     "('" + userid.getText().toString() + "','" + userpwd.getText().toString() + "','" + useremail.getText().toString() + "')";
             db.execSQL(sql2);
             Log.v("test", "addid 6");
-            Toast.makeText(this, "添加成功！", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "注册成功！", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(A3_Register.this, A2_Login.class));
             db.close();
         } else {
             Toast.makeText(this, "两次密码不一致，请重新输入！", Toast.LENGTH_SHORT).show();

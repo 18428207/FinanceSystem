@@ -17,11 +17,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".A2_Login"></activity>
-        <activity android:name=".A3_Register"></activity>
-        <activity android:name=".E1_WealthIndex"></activity>
-       <activity android:name=".C1_FriendsIndex"></activity>
-       <activity android:name=".C2_SearchFriend"></activity>
+        <activity android:name=".A2_Login" android:launchMode="singleTask"></activity>
+        <activity android:name=".A3_Register" android:launchMode="singleTask"></activity>
+        <activity android:name=".E1_WealthIndex" android:launchMode="singleTask"></activity>
+       <activity android:name=".C1_FriendsIndex" android:launchMode="singleTask"></activity>
+       <activity android:name=".B1_MyIndex" android:launchMode="singleTask"></activity>
+       <activity android:name=".B2_TotalAssets" android:launchMode="singleTask"></activity>
+       <activity android:name=".B3_TotalRevenue" android:launchMode="singleTask"></activity>
+       <activity android:name=".B4_Bill" android:launchMode="singleTask"></activity>
+       <activity android:name=".B5_Balance" android:launchMode="singleTask"></activity>
+       <activity android:name=".B6_BankCard" android:launchMode="singleTask"></activity>
+       <activity android:name=".B7_Setting" android:launchMode="singleTask"></activity>
+       <activity android:name=".B8_CustomerService" android:launchMode="singleTask"></activity>
+       <activity android:name=".C2_AddFriend" android:launchMode="singleTask"></activity>
+       <activity android:name=".E2_HKD" android:launchMode="singleTask"></activity>
+       <activity android:name=".E3_Fund" android:launchMode="singleTask"></activity>
+       <activity android:name=".E4_Stock" android:launchMode="singleTask"></activity>
+       <activity android:name=".E5_Borrow" android:launchMode="singleTask"></activity>
+       <activity android:name=".E6_Loan" android:launchMode="singleTask"></activity>
+       <activity android:name=".E7_Borrowintolist" android:launchMode="singleTask"></activity>
+       <activity android:name=".E8_Loanintolist" android:launchMode="singleTask"></activity>
+
     </application>
 
 </manifest>

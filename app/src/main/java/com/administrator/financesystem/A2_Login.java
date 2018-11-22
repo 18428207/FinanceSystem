@@ -74,4 +74,43 @@ public class A2_Login extends AppCompatActivity {
         return false;
     }
 
+    protected void onNewIntent(Intent intent) {
+
+        super.onNewIntent(intent);
+        setContentView(R.layout.a2_login);
+        // showSoftInputFromWindow(this,mAdminIDView);
+        dbHelper = new MySqliteHelper(this, "fs.db", null, 1);
+        //  Log.v("test","oncreat database open");
+
+        Button btnLogin = (Button) findViewById(R.id.a2_btn);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                userid = findViewById(R.id.a2_id);
+                userpassword = findViewById(R.id.a2_pwd);
+                String userID = userid.getText().toString();
+                String passWord = userpassword.getText().toString();
+                if (login(userID, passWord)) {
+
+                    loginflag = 1;
+                    Log.v("test", "loginclicked success");
+                    Bundle bundle = new Bundle();
+                    bundle.putString("LoginuserID", userID);
+                    Intent intent1 = new Intent(A2_Login.this, E1_WealthIndex.class);
+                    intent1.putExtras(bundle);
+
+                    startActivity(intent1);
+                    Log.v("test", "传输成功的userID是："+userID);
+                    Toast.makeText(A2_Login.this, "登陆成功", Toast.LENGTH_SHORT).show();
+                } else if ((userid.getText().toString().isEmpty()) || (userpassword.getText().toString().isEmpty())) {
+                    Toast.makeText(A2_Login.this, "账户和密码不能为空，请重新输入", Toast.LENGTH_SHORT).show();
+                } else if (loginflag != 1) {
+                    Toast.makeText(A2_Login.this, "账号或者密码错误,请重新输入", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        });
+    }
+
 }
